@@ -33,6 +33,12 @@ class Plugin {
 			require_once( plugin_dir_path( ASEF_PLUGIN_FILE ) . 'includes/' . $class . '.php' );
 			$this->$class = ('AntispamForElementorForms\\' . $class)::get_instance();
 		}
+
+        // Register form fields
+        add_action( 'elementor_pro/forms/fields/register', [$this, 'register_form_fields'] );
+
+        // Enqueue assets
+        add_action( 'wp_enqueue_scripts', [$this, 'enqueue_assets'] );
 	}
 
 	/**
@@ -56,6 +62,44 @@ class Plugin {
 	public static function deactivation() {
 		wp_unschedule_event( wp_next_scheduled( 'asef_cron' ), 'asef_cron' );
 	}
+
+    /**
+     * Register Elementor form fields.
+     *
+     * @param \ElementorPro\Modules\Forms\Registrars\Form_Fields_Registrar $form_fields_registrar
+     * @return void
+     */
+    function register_form_fields( $registrar ) {
+        require_once( plugin_dir_path( ASEF_PLUGIN_FILE ) . 'includes/JS_Honeypot_Field.php' );
+
+        $registrar->register( new JS_Honeypot_Field() );
+    }
+
+    /**
+     * Enqueue plugin assets.
+     *
+     * @return void
+     */
+    function enqueue_assets() {
+        $version = $this->get_version();
+
+        wp_register_script( 'antispam-for-elementor-forms', plugin_dir_url( ASEF_PLUGIN_FILE ) . 'assets/js/antispam-for-elementor-forms.js', [], $version );
+    }
+
+    /**
+     * Get plugin version.
+     *
+     * @return string|null
+     */
+    function get_version(): ?string {
+        if( !function_exists( 'get_plugin_data' ) ){
+            require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+        }
+
+        $data = get_plugin_data( ASEF_PLUGIN_FILE );
+
+        return $data['Version'] ?? null;
+    }
 
 	/**
 	 * Get class instance.

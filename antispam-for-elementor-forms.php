@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: Antispam for Elementor Forms
- * Plugin URI: https://github.com/
+ * Plugin URI: https://github.com/MadeByGreyhound/antispam-for-elementor-forms
  * Description: Check contents of Elementor Forms for spam.
- * Version: 1.0
+ * Version: 2.0
  * Requires at least: 5.2
  * Requires PHP: 7.4
- * Author: Tom Slominski
- * Author URI: https://slomin.ski/
+ * Author: Greyhound Studio
+ * Author URI: https://greyhound.studio/
  */
 
 use AntispamForElementorForms\Plugin;
@@ -15,7 +15,7 @@ use AntispamForElementorForms\Plugin;
 // Load main plugin file
 require __DIR__ . '/includes/Plugin.php';
 
-// Define root directory
+// Define constants
 const ASEF_PLUGIN_FILE = __FILE__;
 
 /**
