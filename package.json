@@ -1,0 +1,19 @@
+{
+  "name": "antispam-for-elementor-forms",
+  "description": "Check contents of Elementor Forms for spam.",
+  "author": "Greyhound Studio <hello@greyhound.studio>",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "devDependencies": {
+    "laravel-mix": "^6.0.49"
+  },
+  "repository" : {
+    "url" : "https://github.com/MadeByGreyhound/antispam-for-elementor-forms"
+  },
+  "scripts": {
+    "watch": "npx mix watch",
+    "dev": "npx mix",
+    "prod": "npx mix --production",
+    "build": "npx mix --production"
+  }
+}
