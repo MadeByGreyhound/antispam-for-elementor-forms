@@ -1,5 +1,5 @@
 # Antispam for Elementor Forms
-WordPress plugin for adding two methods of preventing spam submissions in Elementor Pro forms - automatic checks against the [WordPress comment blacklist](https://github.com/splorp/wordpress-comment-blacklist) and a [JavaScript-based honeypot field](https://davidwalsh.name/wordpress-comment-spam).
+WordPress plugin for adding two methods of preventing spam submissions in Elementor Pro forms - automatic checks against the [WordPress comment blocklist](https://github.com/splorp/wordpress-comment-blacklist) and a [JavaScript-based honeypot field](https://davidwalsh.name/wordpress-comment-spam).
 
 ## Developer documentation
 
