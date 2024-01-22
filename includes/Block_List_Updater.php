@@ -1,6 +1,8 @@
 <?php
 namespace AntispamForElementorForms;
 
+if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 /**
  * Retrieve block list from GitHub and save it in WordPress.
  */

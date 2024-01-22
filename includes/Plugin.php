@@ -1,6 +1,8 @@
 <?php
 namespace AntispamForElementorForms;
 
+if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 /**
  * Main plugin class.
  */

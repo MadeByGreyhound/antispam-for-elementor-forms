@@ -1,9 +1,7 @@
 <?php
 namespace AntispamForElementorForms;
 
-if( !defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
-}
+if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
  * Add a JS Honeypot field to Elementor Forms.

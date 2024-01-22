@@ -1,6 +1,8 @@
 <?php
 namespace AntispamForElementorForms;
 
+if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 use Elementor\Settings_Page;
 use Elementor\Utils;
 
