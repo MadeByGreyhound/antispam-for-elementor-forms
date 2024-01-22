@@ -10,6 +10,8 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
 WordPress plugin for adding two methods of preventing spam submissions in Elementor Pro forms - automatic checks against the WordPress comment blocklist and a JavaScript-based honeypot field.
 
+This plugin uses the [WordPress comment blocklist](https://github.com/splorp/wordpress-comment-blacklist) from GitHub.
+
 == Installation ==
 1) Install the plugin from the WordPress Plugin Directory.
 2a) Checks against the comment blocklist are performed automatically, but further configuration can be done in Elementor -> Settings, in the Antispam for Elementor Forms tab.
