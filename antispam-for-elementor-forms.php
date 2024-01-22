@@ -8,6 +8,8 @@
  * Requires PHP: 8.0
  * Author: Greyhound Studio
  * Author URI: https://greyhound.studio/
+ * License: GPLv3
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html 
  */
 
 use AntispamForElementorForms\Plugin;
