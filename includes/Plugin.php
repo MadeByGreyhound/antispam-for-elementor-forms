@@ -85,7 +85,9 @@ class Plugin {
     function enqueue_assets() {
         $version = $this->get_version();
 
-        wp_register_script( 'antispam-for-elementor-forms', plugin_dir_url( ASEF_PLUGIN_FILE ) . 'assets/js/antispam-for-elementor-forms.js', [], $version );
+        wp_register_script( 'antispam-for-elementor-forms', plugin_dir_url( ASEF_PLUGIN_FILE ) . 'assets/js/antispam-for-elementor-forms.js', ['jquery', 'elementor-frontend'], $version, [
+			'in_footer' => true,
+        ] );
     }
 
     /**
