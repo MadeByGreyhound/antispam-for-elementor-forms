@@ -4,7 +4,7 @@ Tags: elementor, forms, antispam, honeypot
 Requires at least: 5.2
 Tested up to: 6.4.1
 Requires PHP: 8.0
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 License: GPL v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
