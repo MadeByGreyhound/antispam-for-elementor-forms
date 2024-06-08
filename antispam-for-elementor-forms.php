@@ -3,13 +3,14 @@
  * Plugin Name: Antispam for Elementor Forms
  * Plugin URI: https://github.com/MadeByGreyhound/antispam-for-elementor-forms
  * Description: Check contents of Elementor Forms for spam.
- * Version: 2.2.0
+ * Version: 2.2.1
  * Requires at least: 5.2
  * Requires PHP: 8.0
  * Author: Greyhound Studio
  * Author URI: https://greyhound.studio/
  * License: GPLv3
- * License URI: https://www.gnu.org/licenses/gpl-3.0.html 
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
+ * Requires Plugins: elementor
  */
 
 if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
