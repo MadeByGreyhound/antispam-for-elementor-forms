@@ -11,7 +11,7 @@ function registerHoneypot( form ) {
 			if( 'true' !== form.dataset.hpFieldSet ) {
 				const honeypot = form.querySelector( '.asef-js-hp-container' );
 
-				honeypot.innerHTML = '<label for="asef-js-hp">' + honeypot.dataset.label + '</label><input type="hidden" name="asef-js-hp" id="asef-js-hp">';
+				honeypot.innerHTML = `<label for="asef-js-hp">${honeypot.dataset.label}</label><input type="hidden" name="asef-js-hp" id="asef-js-hp" value="${Math.floor(Date.now() / 1000)}">`;
 				form.dataset.hpFieldSet = 'true';
 			}
 		} );
@@ -28,4 +28,17 @@ document.querySelectorAll( '.elementor-form' ).forEach( registerHoneypot );
  */
 jQuery( document ).on( 'elementor/popup/show', (event, id, instance) => {
 	instance.$element[0].querySelectorAll( '.elementor-form' ).forEach( registerHoneypot );
+} );
+
+/**
+ * Reset honeypot on form submission.
+ */
+jQuery( document ).ready( $ => {
+	$( document ).on('submit_success', event => {
+		const form = event.target;
+		const honeypot = form.querySelector( '.asef-js-hp-container' );
+		
+		delete form.dataset.hpFieldSet;
+		honeypot.innerHTML = '';
+	} );
 } );
