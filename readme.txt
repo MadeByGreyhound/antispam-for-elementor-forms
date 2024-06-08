@@ -2,7 +2,7 @@
 Contributors: madebygreyhound
 Tags: elementor, forms, antispam, honeypot
 Requires at least: 5.2
-Tested up to: 6.4.1
+Tested up to: 6.5.4
 Requires PHP: 8.0
 Stable tag: 2.2.1
 License: GPL v3
@@ -33,3 +33,6 @@ This plugin uses the WordPress comment blocklist from GitHub (https://github.com
 2.2.1
 - Update Tested up to value for WordPress.
 - Explicitly add Elementor dependency.
+
+2.2.2
+- Actually update Tested up to value for WordPress.
