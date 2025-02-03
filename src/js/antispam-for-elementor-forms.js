@@ -4,18 +4,20 @@
  * @param {HTMLFormElement} form
  */
 function registerHoneypot( form ) {
-	const fields = form.querySelectorAll( 'input, select, textarea' );
+	const honeypot = form.querySelector( '.asef-js-hp-container' );
+	
+	if( honeypot ) {
+		const fields = form.querySelectorAll( 'input, select, textarea' );
 
-	fields.forEach( field => {
-		field.addEventListener( 'focus', () => {
-			if( 'true' !== form.dataset.hpFieldSet ) {
-				const honeypot = form.querySelector( '.asef-js-hp-container' );
-
-				honeypot.innerHTML = `<label for="asef-js-hp">${honeypot.dataset.label}</label><input type="hidden" name="asef-js-hp" id="asef-js-hp" value="${Math.floor(Date.now() / 1000)}">`;
-				form.dataset.hpFieldSet = 'true';
-			}
+		fields.forEach( field => {
+			field.addEventListener( 'focus', () => {
+				if( 'true' !== form.dataset.hpFieldSet ) {
+					honeypot.innerHTML = `<label for="asef-js-hp">${honeypot.dataset.label}</label><input type="hidden" name="asef-js-hp" id="asef-js-hp" value="${Math.floor(Date.now() / 1000)}">`;
+					form.dataset.hpFieldSet = 'true';
+				}
+			} );
 		} );
-	} );
+	}
 }
 
 /**
@@ -38,7 +40,9 @@ jQuery( document ).ready( $ => {
 		const form = event.target;
 		const honeypot = form.querySelector( '.asef-js-hp-container' );
 		
-		delete form.dataset.hpFieldSet;
-		honeypot.innerHTML = '';
+		if( honeypot ) {
+			delete form.dataset.hpFieldSet;
+			honeypot.innerHTML = '';
+		}
 	} );
 } );
