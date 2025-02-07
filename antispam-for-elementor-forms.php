@@ -3,7 +3,7 @@
  * Plugin Name: Antispam for Elementor Forms
  * Plugin URI: https://github.com/MadeByGreyhound/antispam-for-elementor-forms
  * Description: Check contents of Elementor Forms for spam.
- * Version: 2.2.3
+ * Version: 2.2.4
  * Requires at least: 5.2
  * Requires PHP: 8.0
  * Author: Greyhound Studio

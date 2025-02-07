@@ -4,7 +4,7 @@ Tags: elementor, forms, antispam, honeypot
 Requires at least: 5.2
 Tested up to: 6.7.1
 Requires PHP: 8.0
-Stable tag: 2.2.1
+Stable tag: 2.2.4
 License: GPL v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -47,3 +47,6 @@ This plugin uses the WordPress comment blocklist from GitHub (https://github.com
 - Update Tested up to value for WordPress.
 - Fix JS errors when used with multiple forms.
 - Update readme to fix Short Description length error.
+
+2.2.4
+- Fix versioning to allow the plugin to update.
