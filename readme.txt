@@ -2,9 +2,9 @@
 Contributors: madebygreyhound
 Tags: elementor, forms, antispam, honeypot
 Requires at least: 5.2
-Tested up to: 6.7.1
+Tested up to: 6.8
 Requires PHP: 8.0
-Stable tag: 2.2.4
+Stable tag: 2.2.5
 License: GPL v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
